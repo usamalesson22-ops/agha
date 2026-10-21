@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AGHA FOOD'S — Kebab & Pizza | Flame-Grilled & Wood-Fired Perfection</title>
+  
+  <!-- SEO & Social Meta -->
+  <meta name="description" content="Agha Food's delivers authentic charcoal seekh kebabs, artisan wood-fired pizzas, monster smash burgers, and loaded platters. Order online with 25-min express delivery!">
+  <meta name="theme-color" content="#FF5E14">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. Top Notification Bar
+       ======================================================================== -->
+  <aside class="top-announcement" aria-label="Special Offers">
+    <div class="container announcement-inner">
+      <div class="announcement-text">
+        <span class="badge-tag">LATE NIGHT HOTLINE</span>
+        <span>🔥 WE DELIVER TILL 2:00 AM! USE CODE <strong>AGHA20</strong> FOR 20% OFF YOUR FIRST ORDER</span>
+      </div>
+      <div class="announcement-actions">
+        <button id="sfx-toggle" class="sfx-toggle" title="Toggle Sound Effects">
+          <span>🔊</span> Sound: ON
+        </button>
+        <span style="color: rgba(255,255,255,0.2)">|</span>
+        <a href="tel:+15552345678" style="color: var(--color-primary); font-weight: 700;">📞 +1 (555) 234-5678</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       2. Navigation Header (Glassmorphic)
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand-logo" aria-label="Agha Foods Home">
+        <img src="assets/images/logo.png" alt="Agha Food's Kebab & Pizza Logo" class="brand-logo-img">
+        <div class="brand-text">
+          <span class="brand-name">AGHA FOOD'S</span>
+          <span class="brand-sub">KEBAB & PIZZA</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-links" id="navLinks" aria-label="Main Navigation">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#discover" class="nav-link">Discover</a>
+        <a href="#menu" class="nav-link">Signature Menu</a>
+        <a href="#cravers-lab" class="nav-link">Craver's Lab</a>
+        <a href="#story" class="nav-link">Our Story</a>
+        <a href="#reviews" class="nav-link">Reviews</a>
+        <a href="#reserve" class="nav-link">Reserve</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Cart Drawer Button -->
+        <button class="cart-btn" id="cartTrigger" aria-label="Open Cart Drawer" title="View Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-badge" id="cartCountBadge">2</span>
+        </button>
+
+        <!-- Primary CTA -->
+        <a href="#menu" class="btn btn-primary btn-sm" style="display: inline-flex;">
+          🔥 Order Online
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Mobile Menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         3. Hero Section (Matching Reference Image 4 Layout + 3D Parallax)
+         ====================================================================== -->
+    <section class="hero-section" id="hero">
+      <!-- 3D Ember Particle Background Canvas -->
+      <canvas id="ember-canvas" style="position: absolute; inset: 0; pointer-events: none; z-index: 1;"></canvas>
+
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Left Hero Content -->
+          <div class="hero-content">
+            <div class="hero-subtitle-badge">
+              <span>EXCEPTIONAL CUISINE</span>
+              <span style="opacity: 0.4">•</span>
+              <span>EST. 2024</span>
+            </div>
+
+            <h1 class="hero-title">
+              Taste Crafted <br>
+              to <span class="glow-word">Perfection</span>
+            </h1>
+
+            <p class="hero-desc">
+              Authentic wood-fired stone pizzas, sizzling charcoal seekh kebabs, and gourmet smash burgers crafted for intense cravings. 100% fresh, flame-kissed culinary mastery.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#menu" class="btn btn-primary">
+                ORDER NOW
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+
+              <a href="#reserve" class="btn btn-secondary">
+                RESERVE TABLE
+              </a>
+
+              <a href="#cravers-lab" class="btn btn-outline-orange">
+                ⚡ BUILD YOUR FEAST
+              </a>
+            </div>
+
+            <!-- 3 Feature Badges (Exact match to Reference Image 4) -->
+            <div class="hero-features-row">
+              <div class="hero-feature-item">
+                <div class="feature-icon-box">🌿</div>
+                <div class="feature-text-group">
+                  <h5>Fresh Ingredients</h5>
+                  <p>Sourced Daily & 100% Halal</p>
+                </div>
+              </div>
+
+              <div class="hero-feature-item">
+                <div class="feature-icon-box">🏆</div>
+                <div class="feature-text-group">
+                  <h5>Award Winning</h5>
+                  <p>Charcoal Flame Excellence</p>
+                </div>
+              </div>
+
+              <div class="hero-feature-item">
+                <div class="feature-icon-box">👨‍🍳</div>
+                <div class="feature-text-group">
+                  <h5>Expertly Crafted</h5>
+                  <p>Secret 14-Spice Heritage</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right 3D Visual Showcase -->
+          <div class="hero-visual">
+            <div class="hero-plate-wrapper">
+              <!-- Radial Fire Glow -->
+              <div class="plate-ambient-glow"></div>
+
+              <!-- 3D Interactive Plate -->
+              <div class="hero-plate-3d" id="heroPlate3D">
+                <img src="assets/images/hero_dish.jpg" alt="Agha Food's Signature Feast" class="hero-plate-img">
+              </div>
+
+              <!-- Rotating Circular Stamp Badge (Exact match to Maison Savour Ref Image 4) -->
+              <div class="rotating-stamp-badge" title="Agha Food's Certified Premium Taste">
+                <svg class="stamp-svg" viewBox="0 0 120 120">
+                  <path id="curve" fill="transparent" d="M 60, 60 m -46, 0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0" />
+                  <text font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800" fill="#FFA800" letter-spacing="3.2px">
+                    <textPath href="#curve" xlink:href="#curve" startOffset="0%">
+                      • AGHA FOOD'S • PREMIUM EXPERIENCE •
+                    </textPath>
+                  </text>
+                </svg>
+                <div class="stamp-center-icon">👑</div>
+              </div>
+
+              <!-- Floating Micro Glass Card 1 (Bottom Left) -->
+              <div class="floating-glass-card floating-card-left">
+                <div class="floating-card-content">
+                  <div class="flame-circle">🔥</div>
+                  <div>
+                    <div class="card-title">Charcoal Sizzle</div>
+                    <div class="card-subtitle">Fresh Off Red-Hot Coals</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. "Discover Our Menu" Highlight Section (Reference Image 3 Style)
+         ====================================================================== -->
+    <section class="discover-banner-section" id="discover">
+      <div class="container">
+        <div class="discover-banner-grid">
+          <div class="discover-header-block">
+            <h3>DISCOVER</h3>
+            <h2>Our <em>Menu</em></h2>
+            <p>
+              Our culinary team spent months researching and testing authentic flame-grilling traditions, slow-risen dough concepts, and house-blended spices to curate the ultimate feast. Now featuring an unbeatable variety of sizzling kebabs, loaded crown pizzas, and mega platters designed to ensure everyone has something unforgettable to enjoy.
+            </p>
+            <div style="display: flex; gap: 16px; align-items: center;">
+              <a href="#menu" class="btn btn-primary">
+                View Full Menu
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+              </a>
+              <span style="font-size: 0.88rem; color: var(--color-primary); font-weight: 700;">
+                ⚡ Average Wait: 15–20 Mins
+              </span>
+            </div>
+          </div>
+
+          <!-- Feature Spotlight Plate -->
+          <div class="discover-plate-showcase">
+            <div class="splash-plate-card">
+              <img src="assets/images/kebab_charcoal.jpg" alt="Charcoal Seekh Kebab Platter">
+              <div class="splash-plate-info">
+                <div class="splash-title-wrap">
+                  <h4>Royal Char-Grilled Seekh</h4>
+                  <p>Served with fresh hot lavash, garlic toum & roasted peppers</p>
+                </div>
+                <button class="btn btn-secondary btn-sm" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">
+                  Order Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. Signature Collection Section (Directly Matching Ref Image 4 Grid)
+         ====================================================================== -->
+    <section class="signature-section" id="menu">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header-center">
+          <span class="section-tag">CHEF'S FAVORITES</span>
+          <h2 class="section-title">Signature <span class="gradient-orange">Collection</span></h2>
+          <p class="section-desc">
+            Handpicked favorites from our menu, crafted with raw passion, premium cuts, and designed to leave a lasting impression.
+          </p>
+        </div>
+
+        <!-- Filter Navigation Pills -->
+        <div class="menu-filter-nav">
+          <button class="filter-pill active" data-filter="all">🌟 All Specials</button>
+          <button class="filter-pill" data-filter="kebab">🍢 Charcoal Kebabs</button>
+          <button class="filter-pill" data-filter="pizza">🍕 Stone-Fired Pizza</button>
+          <button class="filter-pill" data-filter="burger">🍔 Smash Burgers</button>
+          <button class="filter-pill" data-filter="platter">🍟 Loaded Platters</button>
+          <button class="filter-pill" data-filter="beverage">🍹 Cool Refreshers</button>
+        </div>
+
+        <!-- Menu Grid (4 columns as in Ref Image 4) -->
+        <div class="menu-grid">
+          <!-- Card 1: Seekh Kebab -->
+          <article class="menu-card" data-category="kebab" data-id="item-kebab-1">
+            <div class="menu-card-image-box">
+              <img src="assets/images/kebab_charcoal.jpg" alt="Royal Charcoal Seekh Kebab" class="menu-card-img" loading="lazy">
+              <span class="badge-float hot">🔥 Sizzling Hot</span>
+              <span class="badge-heat" title="Spicy">🌶️🌶️</span>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-title">Royal Charcoal Seekh</h3>
+              <p class="menu-card-desc">Ground tender beef & lamb infused with 14 secret herbs, flame-skewered over aromatic coals.</p>
+              <div class="menu-card-footer">
+                <div class="price-tag"><span class="price-currency">$</span>14.99</div>
+                <button class="add-cart-btn" aria-label="Add Royal Seekh Kebab to Cart" title="Add to Order">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Pepperoni Pizza -->
+          <article class="menu-card" data-category="pizza" data-id="item-pizza-1">
+            <div class="menu-card-image-box">
+              <img src="assets/images/pizza_pepperoni.jpg" alt="Crown Crust Cheesy Pepperoni" class="menu-card-img" loading="lazy">
+              <span class="badge-float">🧀 Extra Cheesy</span>
+              <span class="badge-heat" title="Bestseller">👑</span>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-title">Crown Crust Pepperoni</h3>
+              <p class="menu-card-desc">48-hour cold fermented crust, rich San Marzano tomato sauce, double mozzarella & spicy beef pepperoni.</p>
+              <div class="menu-card-footer">
+                <div class="price-tag"><span class="price-currency">$</span>16.49</div>
+                <button class="add-cart-btn" aria-label="Add Crown Pepperoni Pizza to Cart" title="Add to Order">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Doner Shawarma -->
+          <article class="menu-card" data-category="kebab" data-id="item-doner-1">
+            <div class="menu-card-image-box">
+              <img src="assets/images/kebab_doner.jpg" alt="Doner Shawarma Overload" class="menu-card-img" loading="lazy">
+              <span class="badge-float hot">⚡ Fan Favorite</span>
+              <span class="badge-heat" title="Medium Heat">🌶️</span>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-title">Doner Shawarma Overload</h3>
+              <p class="menu-card-desc">Slow-roasted shaved spit chicken & lamb piled high with garlic toum, pickles, and crispy fries.</p>
+              <div class="menu-card-footer">
+                <div class="price-tag"><span class="price-currency">$</span>15.99</div>
+                <button class="add-cart-btn" aria-label="Add Doner Shawarma to Cart" title="Add to Order">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Truffle Stone Pizza -->
+          <article class="menu-card" data-category="pizza" data-id="item-pizza-2">
+            <div class="menu-card-image-box">
+              <img src="assets/images/pizza_special.jpg" alt="Truffle Mushroom Fire Pizza" class="menu-card-img" loading="lazy">
+              <span class="badge-float">🍄 Chef Special</span>
+              <span class="badge-heat" title="Gourmet">✨</span>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-title">Truffle Wild Mushroom</h3>
+              <p class="menu-card-desc">Charred stone oven crust, white truffle oil, roasted wild forest mushrooms, thyme, and smoked scamorza.</p>
+              <div class="menu-card-footer">
+                <div class="price-tag"><span class="price-currency">$</span>17.99</div>
+                <button class="add-cart-btn" aria-label="Add Truffle Pizza to Cart" title="Add to Order">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5: Smash Burger -->
+          <article class="menu-card" data-category="burger" data-id="item-burger-1">
+            <div class="menu-card-image-box">
+              <img src="assets/images/burger_monster.jpg" alt="Monster Double Smash Burger" class="menu-card-img" loading="lazy">
+              <span class="badge-float hot">🍔 100% Angus</span>
+              <span class="badge-heat" title="Loaded">💪</span>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-title">Monster Double Smash</h3>
+              <p class="menu-card-desc">Two lacy-edged smashed beef patties, melted cheddar avalanche, house secret sauce on toasted brioche.</p>
+              <div class="menu-card-footer">
+                <div class="price-tag"><span class="price-currency">$</span>12.99</div>
+                <button class="add-cart-btn" aria-label="Add Monster Burger to Cart" title="Add to Order">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6: Sultan's Mixed Grill Platter -->
+          <article class="menu-card" data-category="platter" data-id="item-platter-1">
+            <div class="menu-card-image-box">
+              <img src="assets/images/platter_grill.jpg" alt="Sultan's Mixed Meat Grill Platter" class="menu-card-img" loading="lazy">
+              <span class="badge-float">👑 Feeds 2-3</span>
+              <span class="badge-heat" title="Mega Feast">🔥</span>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-title">Sultan's Mixed Feast</h3>
+              <p class="menu-card-desc">Trio of seekh kebabs, marinated chicken tikka, doner cuts, spiced saffron rice, hummus & warm pita.</p>
+              <div class="menu-card-footer">
+                <div class="price-tag"><span class="price-currency">$</span>24.99</div>
+                <button class="add-cart-btn" aria-label="Add Sultan's Feast to Cart" title="Add to Order">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 7: Loaded Peri-Peri Fries -->
+          <article class="menu-card" data-category="platter" data-id="item-fries-1">
+            <div class="menu-card-image-box">
+              <img src="assets/images/fries_loaded.jpg" alt="Spicy Peri-Peri Loaded Fries" class="menu-card-img" loading="lazy">
+              <span class="badge-float hot">🍟 Late Night Squad</span>
+              <span class="badge-heat" title="Spicy">🌶️🌶️</span>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-title">Firehouse Loaded Fries</h3>
+              <p class="menu-card-desc">Crispy golden skin-on fries drowned in warm cheese sauce, spicy minced meat, jalapeños & chipotle drizzle.</p>
+              <div class="menu-card-footer">
+                <div class="price-tag"><span class="price-currency">$</span>8.99</div>
+                <button class="add-cart-btn" aria-label="Add Loaded Fries to Cart" title="Add to Order">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 8: Citrus Sunset Mojito -->
+          <article class="menu-card" data-category="beverage" data-id="item-drink-1">
+            <div class="menu-card-image-box">
+              <img src="assets/images/beverage_chill.jpg" alt="Sunset Mint Citrus Mojito" class="menu-card-img" loading="lazy">
+              <span class="badge-float">🧊 Sub-Zero Chill</span>
+              <span class="badge-heat" title="Refreshing">🌿</span>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-title">Sunset Citrus Mojito</h3>
+              <p class="menu-card-desc">Freshly crushed mint, zesty blood orange, sparkling fizz, and a touch of wild mountain honey.</p>
+              <div class="menu-card-footer">
+                <div class="price-tag"><span class="price-currency">$</span>5.49</div>
+                <button class="add-cart-btn" aria-label="Add Mojito to Cart" title="Add to Order">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Footer Menu Action -->
+        <div class="menu-footer-cta">
+          <a href="#cravers-lab" class="btn btn-primary">
+            VIEW FULL MENU & CRAVE LAB
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. "Craver's Lab" - Interactive 3D Feast Customizer (Ages 15-30 Focus)
+         ====================================================================== -->
+    <section class="cravers-lab-section" id="cravers-lab">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="section-tag">INTERACTIVE EXPERIENCE</span>
+          <h2 class="section-title">The <span class="gradient-orange">Craver's Lab</span></h2>
+          <p class="section-desc">
+            Build your ultimate dream box. Customize your base, load your meats, crank up the spice heat, and trigger a cheese avalanche in real-time.
+          </p>
+        </div>
+
+        <div class="lab-box-grid">
+          <!-- Left: Customizer Steps -->
+          <div class="lab-controls-panel">
+            <!-- Step 1: Base -->
+            <div class="lab-step-block">
+              <div class="lab-step-label">1. Choose Your Base</div>
+              <div class="lab-options-row">
+                <button class="lab-option-btn selected" data-step="base" data-name='12" Stone Pizza' data-price="14.99" data-img="assets/images/pizza_pepperoni.jpg">
+                  🍕 12" Stone-Fired Pizza ($14.99)
+                </button>
+                <button class="lab-option-btn" data-step="base" data-name="Charcoal Kebab Box" data-price="13.99" data-img="assets/images/kebab_charcoal.jpg">
+                  🍢 Sizzling Kebab Box ($13.99)
+                </button>
+                <button class="lab-option-btn" data-step="base" data-name="Mega Loaded Platter" data-price="18.99" data-img="assets/images/platter_grill.jpg">
+                  🍟 Mega Loaded Box ($18.99)
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2: Protein -->
+            <div class="lab-step-block">
+              <div class="lab-step-label">2. Pick Your Main Protein</div>
+              <div class="lab-options-row">
+                <button class="lab-option-btn selected" data-step="protein" data-name="Charred Seekh" data-price="4.50">
+                  🥩 Charred Seekh Kebab (+$4.50)
+                </button>
+                <button class="lab-option-btn" data-step="protein" data-name="Spiced Doner" data-price="4.00">
+                  🍖 Spiced Doner Strips (+$4.00)
+                </button>
+                <button class="lab-option-btn" data-step="protein" data-name="Crispy Tenders" data-price="3.50">
+                  🍗 Crispy Nashville Tenders (+$3.50)
+                </button>
+                <button class="lab-option-btn" data-step="protein" data-name="Double Beef Patty" data-price="5.00">
+                  🍔 Double Angus Smashed (+$5.00)
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 3: Spice Level -->
+            <div class="lab-step-block">
+              <div class="lab-step-label">3. Select Spice Level</div>
+              <div class="lab-options-row">
+                <button class="lab-option-btn" data-step="spice" data-name="Mild Garlic Herb" data-label="🧄 Mild Herb">
+                  🧄 Mild Garlic Herb
+                </button>
+                <button class="lab-option-btn" data-step="spice" data-name="Peri-Peri Flame" data-label="🌶️ Peri-Peri Flame">
+                  🌶️ Peri-Peri Flame
+                </button>
+                <button class="lab-option-btn selected" data-step="spice" data-name="Volcanic Ghost Pepper" data-label="🔥🔥🔥 Extreme Ghost">
+                  🔥🔥🔥 Ghost Pepper Extreme
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 4: Cheese Avalanche -->
+            <div class="lab-step-block">
+              <div class="lab-step-label">4. Cheese Overload</div>
+              <div class="lab-options-row">
+                <button class="lab-option-btn" data-step="cheese" data-name="Standard Melt" data-price="0">
+                  🧀 Standard Melt (Free)
+                </button>
+                <button class="lab-option-btn selected" data-step="cheese" data-name="Lava Mozzarella" data-price="2.50">
+                  🌋 Lava Mozzarella Avalanche (+$2.50)
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Live 3D Plate Visualizer -->
+          <div class="lab-preview-card">
+            <div class="lab-preview-dish">
+              <img id="labDishImg" src="assets/images/pizza_pepperoni.jpg" alt="Customizer Live Preview">
+            </div>
+
+            <h3 class="lab-summary-name" id="labSummaryName">Charred Seekh 12" Stone Pizza</h3>
+            
+            <div class="lab-summary-tags" id="labTagsContainer">
+              <span class="lab-summary-tag">🔥 Charred Seekh</span>
+              <span class="lab-summary-tag">🔥🔥🔥 Extreme Ghost</span>
+              <span class="lab-summary-tag">🧀 Lava Mozzarella</span>
+            </div>
+
+            <div class="lab-price-row">
+              <span style="color: var(--color-text-muted); font-size: 0.9rem;">Estimated Box Total:</span>
+              <span class="lab-price-val" id="labPriceValue">$21.99</span>
+            </div>
+
+            <button class="btn btn-primary full-width" id="addCustomBoxBtn" style="width: 100%; margin-top: 18px;">
+              🚀 ADD CUSTOM BOX TO CART
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. Our Story Section (Matching Reference Image 4 Layout)
+         ====================================================================== -->
+    <section class="story-section" id="story">
+      <div class="container">
+        <div class="story-grid">
+          <!-- Left: Story Narrative -->
+          <div class="story-content">
+            <span class="section-tag">OUR STORY</span>
+            <h2 class="section-title">Passion in <span class="gradient-orange">Every Flame</span></h2>
+            
+            <p class="section-desc" style="margin-bottom: 20px;">
+              At Agha Food's, we believe great food isn't simply prepared—it's forged in fire. What began as a family obsession with authentic Turkish-Mediterranean skewered meats and artisanal Neapolitan wood-fired dough has evolved into a premier late-night dining hub.
+            </p>
+            <p class="section-desc" style="margin-bottom: 24px;">
+              Our grill masters wake before dawn to hand-marinate every skewer with our 14-spice signature blend, while our stone ovens burn red-hot at 450°C. No shortcuts. No frozen patties. Pure fire-kissed perfection.
+            </p>
+
+            <!-- Handwritten Signature (as in Ref Image 4 Maison Savour) -->
+            <div class="story-signature">Agha Food's</div>
+
+            <!-- 3 Stat Metrics (Exact match to Ref Image 4: 12+ Years, 50+ Dishes, 10k+ Guests) -->
+            <div class="story-stats-row">
+              <div class="stat-item">
+                <span class="stat-number">15+</span>
+                <span class="stat-label">Years of Mastery</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">60+</span>
+                <span class="stat-label">Signature Dishes</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">25k+</span>
+                <span class="stat-label">Happy Guests</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: 3-Photo Mosaic Collage (Exact match to Ref Image 4) -->
+          <div class="story-image-mosaic">
+            <div class="mosaic-img-large">
+              <img src="assets/images/chef_plating.jpg" alt="Master Chef Finishing A Sizzling Plate" loading="lazy">
+            </div>
+            <div class="mosaic-img-small">
+              <img src="assets/images/wood_oven.jpg" alt="Artisanal Wood Stone Oven" loading="lazy">
+            </div>
+            <div class="mosaic-img-small">
+              <img src="assets/images/restaurant_vibe.jpg" alt="Agha Food's Late-Night Atmosphere" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         8. Testimonials Section (Matching Reference Image 4 Layout)
+         ====================================================================== -->
+    <section class="testimonials-section" id="reviews">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header-center">
+          <span class="section-tag">WHAT OUR GUESTS SAY</span>
+          <h2 class="section-title">Unforgettable <span class="gradient-orange">Experiences</span></h2>
+          
+          <!-- Rating badge (matching Ref Image 4) -->
+          <div class="reviews-summary-badge">
+            <div class="avatar-stack">
+              <img src="assets/images/avatar_1.jpg" alt="Diner Reviewer">
+              <img src="assets/images/avatar_2.jpg" alt="Diner Reviewer">
+              <img src="assets/images/avatar_3.jpg" alt="Diner Reviewer">
+            </div>
+            <div class="stars-rating">★★★★★</div>
+            <div class="rating-text">
+              <strong>4.9</strong> from 2,500+ happy diners
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Testimonial Cards (Exact match to Ref Image 4) -->
+        <div class="reviews-grid">
+          <!-- Review 1 -->
+          <article class="review-card">
+            <div class="review-card-header">
+              <div class="reviewer-meta">
+                <img src="assets/images/avatar_1.jpg" alt="Farhan M." class="reviewer-avatar">
+                <div class="reviewer-info">
+                  <h5>Farhan M.</h5>
+                  <p>Food Blogger & Critic</p>
+                </div>
+              </div>
+              <div class="quote-icon">“</div>
+            </div>
+            <p class="review-quote">
+              "The charcoal seekh kebabs are charcoal perfection! Tender, smoky, and seasoned with so much depth. Our squad's go-to spot after late-night gaming sessions."
+            </p>
+            <div class="review-card-stars">★★★★★</div>
+          </article>
+
+          <!-- Review 2 -->
+          <article class="review-card">
+            <div class="review-card-header">
+              <div class="reviewer-meta">
+                <img src="assets/images/avatar_2.jpg" alt="Christian P." class="reviewer-avatar">
+                <div class="reviewer-info">
+                  <h5>Christian P.</h5>
+                  <p>Local Entrepreneur</p>
+                </div>
+              </div>
+              <div class="quote-icon">“</div>
+            </div>
+            <p class="review-quote">
+              "Hands down the best crown crust pizza in town. The cheese pull is unreal, and the truffle wild mushroom pizza rivals Michelin-starred pizzerias in Rome."
+            </p>
+            <div class="review-card-stars">★★★★★</div>
+          </article>
+
+          <!-- Review 3 -->
+          <article class="review-card">
+            <div class="review-card-header">
+              <div class="reviewer-meta">
+                <img src="assets/images/avatar_3.jpg" alt="Mikaela L." class="reviewer-avatar">
+                <div class="reviewer-info">
+                  <h5>Hamza R.</h5>
+                  <p>Gaming Streamer</p>
+                </div>
+              </div>
+              <div class="quote-icon">“</div>
+            </div>
+            <p class="review-quote">
+              "Ordered via WhatsApp at 1:15 AM on a Friday. Delivery arrived in 22 minutes piping hot. The monster smash burger and loaded fries were 10/10!"
+            </p>
+            <div class="review-card-stars">★★★★★</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         9. Table Reservation & VIP Lounge Booking
+         ====================================================================== -->
+    <section class="reservation-section" id="reserve">
+      <div class="container">
+        <div class="booking-card">
+          <!-- Left Info Column -->
+          <div class="booking-info">
+            <span class="section-tag">VIP DINING & SQUAD HANGOUTS</span>
+            <h2>Book Your Table</h2>
+            <p>
+              Planning a birthday celebration, gaming tournament feast, or late-night squad dinner? Reserve your booth, lounge, or outdoor heated terrace table in seconds.
+            </p>
+
+            <div class="booking-hotlines">
+              <div class="hotline-item">
+                <div class="hotline-icon">📍</div>
+                <div class="hotline-text">
+                  <h6>Restaurant Location</h6>
+                  <span style="color: var(--color-white); font-weight: 600;">1780 Wilma Gateway, Food Street District</span>
+                </div>
+              </div>
+
+              <div class="hotline-item">
+                <div class="hotline-icon">⏰</div>
+                <div class="hotline-text">
+                  <h6>Operating Hours</h6>
+                  <span style="color: var(--color-white); font-weight: 600;">Monday – Sunday: 12:00 PM – 02:00 AM</span>
+                </div>
+              </div>
+
+              <div class="hotline-item">
+                <div class="hotline-icon">📞</div>
+                <div class="hotline-text">
+                  <h6>Direct Phone Hotline</h6>
+                  <a href="tel:+14330012009">+1 (433) 001-2009</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Booking Form -->
+          <form class="reservation-form" id="reservationForm">
+            <div class="form-group full-width">
+              <label class="form-label" for="resName">Full Name</label>
+              <input type="text" id="resName" name="name" class="form-input" placeholder="e.g. Tariq Agha" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="resPhone">Phone Number</label>
+              <input type="tel" id="resPhone" name="phone" class="form-input" placeholder="+1 (555) 000-0000" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="resGuests">Guests Size</label>
+              <select id="resGuests" name="guests" class="form-select">
+                <option value="2">2 Guests (Couple Table)</option>
+                <option value="4" selected>4 Guests (Squad Booth)</option>
+                <option value="6">6 Guests (Party Table)</option>
+                <option value="10">10+ Guests (VIP Hall)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="resDate">Reservation Date</label>
+              <input type="date" id="resDate" name="date" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="resTime">Preferred Time</label>
+              <select id="resTime" name="time" class="form-select">
+                <option value="18:00">06:00 PM (Dinner)</option>
+                <option value="20:00" selected>08:00 PM (Prime Time)</option>
+                <option value="22:00">10:00 PM (Late Night)</option>
+                <option value="00:00">12:00 AM (Midnight Feast)</option>
+              </select>
+            </div>
+
+            <div class="form-group full-width">
+              <label class="form-label" for="resSeating">Seating Preference</label>
+              <select id="resSeating" name="seating" class="form-select">
+                <option value="Outdoor Heated Terrace">Outdoor Heated Terrace (With City View)</option>
+                <option value="Main Dining Hall">Main Dining Hall (Atmospheric Fire View)</option>
+                <option value="Private VIP Lounge">Private VIP Lounge (Squad Gaming & Privacy)</option>
+              </select>
+            </div>
+
+            <div class="form-group full-width" style="margin-top: 10px;">
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                CONFIRM TABLE RESERVATION
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       10. Slide-out Cart Drawer & Modal
+       ======================================================================== -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart">
+    <!-- Header -->
+    <div class="cart-drawer-header">
+      <h3>Your Feast Order</h3>
+      <button class="cart-close-btn" id="cartCloseBtn" aria-label="Close Cart">✕</button>
+    </div>
+
+    <!-- Free Delivery Progress Tracker -->
+    <div class="free-delivery-tracker">
+      <div class="tracker-label" id="deliveryLabel">
+        <span>Add $2.52 more for <strong>FREE DELIVERY</strong></span>
+        <span>$35.00</span>
+      </div>
+      <div class="tracker-bar">
+        <div class="tracker-progress" id="deliveryProgress" style="width: 92%;"></div>
+      </div>
+    </div>
+
+    <!-- Scrollable Items List -->
+    <div class="cart-items-list" id="cartItemsList">
+      <!-- Populated dynamically via main.js -->
+    </div>
+
+    <!-- Footer & Checkout Actions -->
+    <div class="cart-drawer-footer">
+      <!-- Promo Code Box -->
+      <div style="display: flex; gap: 8px; margin-bottom: 16px;">
+        <input type="text" id="promoCodeInput" placeholder="Promo code (try AGHA20)" class="form-input" style="padding: 8px 12px; font-size: 0.8rem; text-transform: uppercase;">
+        <button id="applyPromoBtn" class="btn btn-secondary btn-sm">Apply</button>
+      </div>
+
+      <div class="cart-subtotal-row">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">$32.48</span>
+      </div>
+      
+      <div class="cart-total-row">
+        <span>Total (Incl. Tax)</span>
+        <span id="cartTotal" class="gradient-orange">$32.48</span>
+      </div>
+
+      <div class="cart-cta-group">
+        <button class="btn btn-primary" id="checkoutBtn">
+          ⚡ PROCEED TO CHECKOUT
+        </button>
+        <button class="btn btn-secondary" id="orderWhatsAppBtn" style="color: #25D366; border-color: rgba(37, 211, 102, 0.4);">
+          💬 ORDER VIA WHATSAPP
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       11. Footer Section (Matching Reference Image 4 Layout)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Bio -->
+        <div class="footer-col footer-brand">
+          <div class="brand-logo">
+            <img src="assets/images/logo.png" alt="Agha Food's Logo" class="brand-logo-img">
+            <div class="brand-text">
+              <span class="brand-name">AGHA FOOD'S</span>
+              <span class="brand-sub">KEBAB & PIZZA</span>
+            </div>
+          </div>
+          <p>
+            Elevating taste, forging memories, and perfecting the art of live charcoal grilling and wood-fired stone oven pizzas. Never compromised, always fresh.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-btn" title="Facebook">f</a>
+            <a href="#" class="social-btn" title="Instagram">ig</a>
+            <a href="#" class="social-btn" title="TikTok">tt</a>
+            <a href="#" class="social-btn" title="YouTube">yt</a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h4>QUICK LINKS</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#menu">Signature Menu</a></li>
+            <li><a href="#cravers-lab">Craver's Lab</a></li>
+            <li><a href="#story">Our Story</a></li>
+            <li><a href="#reviews">Guest Reviews</a></li>
+            <li><a href="#reserve">Table Reservation</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contact Info (as seen in Ref Image 4) -->
+        <div class="footer-col">
+          <h4>CONTACT US</h4>
+          <div class="contact-list">
+            <div class="contact-entry">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>1780 Wilma Gateway, District 72738</span>
+            </div>
+
+            <div class="contact-entry">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <a href="tel:+14330012009">+1 (433) 001-2009</a>
+            </div>
+
+            <div class="contact-entry">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <a href="mailto:hello@aghafoods.com">hello@aghafoods.com</a>
+            </div>
+
+            <div class="contact-entry">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>Mon – Sun: 11:00 AM – 02:00 AM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 4: Newsletter Box (as seen in Ref Image 4) -->
+        <div class="footer-col">
+          <h4>NEWSLETTER</h4>
+          <div class="newsletter-box">
+            <p>Stay updated with our latest secret drops, late-night gaming deals, and VIP squad offers.</p>
+            <form class="newsletter-form" id="newsletterForm">
+              <input type="email" placeholder="Enter your email" class="newsletter-input" required>
+              <button type="submit" class="newsletter-btn">SUBSCRIBE</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div>© 2026 Agha Food's Kebab & Pizza. All Rights Reserved.</div>
+        <div style="display: flex; gap: 24px;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Allergen Guide</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
