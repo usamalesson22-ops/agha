@@ -41,6 +41,26 @@ AUTHORS_POOL = [
 
 TRENDING_IDEAS = [
     {
+        "topic": "The Royal Secrets of Pakistani Charcoal Seekh & Shinwari Flame",
+        "category": "grilling",
+        "categoryBadge": "🇵🇰 Pakistani Heritage",
+        "tabTitle": "🇵🇰 Pakistani Feast",
+        "image": "assets/images/kebab_charcoal.jpg",
+        "author": AUTHORS_POOL[0],
+        "title": "Pakistani Charcoal Heritage: From Gawalmandi Smoke to Shinwari Fire",
+        "excerpt": "Exploring the legendary barbecue culture of Pakistan: how live lump wood embers, hand-tempered spices, and clay tandoor flatbreads forged an iconic street food legacy.",
+        "p1": "Few places on earth understand live-fire cooking like the historic food streets of Pakistan. From the smoke-canopied bazaars of Lahore's Gawalmandi to the rugged live-coal pits of Peshawar's Namak Mandi, barbecue is not merely cooking — it is an ancient theatrical art form passed down through generations of pitmasters.",
+        "h4": "1. The Raw Spice Alchemy of Lahore & Peshawar",
+        "p2": "Authentic Pakistani seekh kebabs owe their legendary juiciness to two sacred rules: cold-ground meat fat ratios (precisely 75% lean to 25% kidney fat) and hand-crushed whole spices. Rather than powdered seasonings, our pitmasters toast green coriander seeds, roasted cumin, pomegranate anardana, and sun-dried Kashmiri chilies. Over glowing mangrove charcoal, the fat vaporizes and permeates every fiber with intoxicating woodsmoke.",
+        "quote": "In Pakistan, the flame is family. When the coals glow white and skewers start singing, strangers become brothers around the dastarkhwan.",
+        "p3": "Served piping hot straight from the embers alongside fresh mint-coriander raita, pickled sumac onions, and pillow-soft tandoori roghni naan baked inside scorching clay walls.",
+        "takeaways": [
+            "100% authentic Pakistani street food recipe honoring Lahore & Peshawar grilling traditions.",
+            "Hand-skewered with stone-crushed whole roasted spices and fresh ginger-garlic paste.",
+            "Served piping hot with clay tandoor roghni naan and house-made mint yogurt raita."
+        ]
+    },
+    {
         "topic": "The Science of Bone Marrow Butter on Sizzling Charcoal Seekh",
         "category": "grilling",
         "categoryBadge": "🍢 Pitmaster Lab",
