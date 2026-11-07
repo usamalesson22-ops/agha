@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initReservationForm();
   initHeaderScroll();
   initMobileNav();
+  initArticles();
   initNewsletter();
 });
 
@@ -593,16 +594,49 @@ function initReservationForm() {
 }
 
 /* ==========================================================================
-   8. Header Scroll & Active Links
+   8. Header Scroll & Active Links (Scroll Spy)
    ========================================================================== */
 function initHeaderScroll() {
   const header = document.querySelector('.site-header');
+  const navLinks = document.querySelectorAll('.nav-links .nav-link');
+  const sections = document.querySelectorAll('section[id], header[id]');
+
   window.addEventListener('scroll', () => {
     if (window.scrollY > 40) {
       header?.classList.add('scrolled');
     } else {
       header?.classList.remove('scrolled');
     }
+
+    // Scroll spy for navigation tabs including Articles
+    const scrollPosition = window.scrollY + 140;
+    let currentId = '';
+
+    sections.forEach(section => {
+      const top = section.offsetTop;
+      const height = section.offsetHeight;
+      if (scrollPosition >= top && scrollPosition < top + height) {
+        currentId = section.getAttribute('id');
+      }
+    });
+
+    if (currentId) {
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${currentId}`) {
+          link.classList.add('active');
+        }
+      });
+    }
+  });
+
+  // Smooth click interaction and active state
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      playSound('click');
+      navLinks.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+    });
   });
 }
 
@@ -682,4 +716,407 @@ function showToast(message) {
   toast.timer = setTimeout(() => {
     toast.style.transform = 'translateX(-50%) translateY(100px)';
   }, 2800);
+}
+
+/* ==========================================================================
+   12. Articles & Culinary Journal Engine
+   ========================================================================== */
+const articlesData = {
+  'article-1': {
+    id: 'article-1',
+    category: 'grilling',
+    categoryBadge: '🍢 Grilling Mastery',
+    readTime: '⏱️ 6 min read',
+    date: 'Nov 5, 2026',
+    title: 'The Science of 800°F Charcoal: Why Real Lump Wood Outperforms Gas Grills',
+    author: 'Chef Tariq Agha',
+    authorRole: 'Master Pitmaster & Founder',
+    authorAvatar: 'assets/images/avatar_1.jpg',
+    image: 'assets/images/kebab_charcoal.jpg',
+    likes: 184,
+    content: `
+      <div class="modal-article-hero">
+        <img src="assets/images/kebab_charcoal.jpg" alt="Charcoal Grilling Seekh">
+        <div class="modal-hero-overlay"></div>
+      </div>
+      <h2 class="modal-article-title">The Science of 800°F Charcoal: Why Real Lump Wood Outperforms Gas Grills</h2>
+      <div class="modal-author-strip">
+        <img src="assets/images/avatar_1.jpg" alt="Chef Tariq Agha" class="author-avatar">
+        <div>
+          <strong style="color: var(--color-white); font-size: 0.95rem; display: block;">Chef Tariq Agha</strong>
+          <span style="color: var(--color-text-muted); font-size: 0.8rem;">Master Pitmaster & Founder • Published Nov 5, 2026</span>
+        </div>
+      </div>
+      <div class="modal-article-prose">
+        <p>Gas grillers often preach the convenience of turning a knob, but lump oakwood charcoal creates thermodynamic poetry that no gas flame or electric element can match. When skewered meat meets an 800°F charcoal zone, surface moisture flash-vaporizes within three seconds.</p>
+        
+        <h4>1. The Chemistry of Instant Flash Searing</h4>
+        <p>This instantaneous flash triggers the renowned Maillard cascade — reducing sugars and amino acids combine rapidly to generate hundreds of new aromatic compounds. Unlike gas combustion, which produces water vapor that steams meat, natural lump charcoal delivers dry, radiant infrared heat that crisps exterior collagen while preserving 100% of internal juices.</p>
+
+        <div class="modal-quote-box">
+          "Charcoal isn't just a heat source; it is an active ingredient. The natural lignin inside seasoned oak produces guaiacol and syringol — the molecular hallmarks of authentic woodsmoke."
+        </div>
+
+        <h4>2. The Fat-Vaporization Feedback Loop</h4>
+        <p>As our hand-skewered seekh kebabs drip spiced fat down into white-hot coals, the droplets don't merely burn away. They atomize into microscopic smoke plumes that surge upward, basting the meat in a gossamer veil of wood-fired umami. It's a continuous self-basting cycle unique to live lump coals.</p>
+
+        <div class="modal-takeaways-box">
+          <div class="modal-takeaways-title">🔥 Pitmaster Takeaways</div>
+          <ul class="modal-takeaways-list">
+            <li>100% organic lump oakwood charcoal with zero chemical binders or petroleum accelerants.</li>
+            <li>Continuous 45-second skewer rotations to maintain internal thermal basting equilibrium.</li>
+            <li>House-tempered 14-spice marinade rested for a minimum of 8 hours before touching coals.</li>
+          </ul>
+        </div>
+      </div>
+    `
+  },
+  'article-2': {
+    id: 'article-2',
+    category: 'pizza',
+    categoryBadge: '🍕 Pizza Science',
+    readTime: '⏱️ 4 min read',
+    date: 'Nov 2, 2026',
+    title: '48-Hour Cold Fermentation: Anatomy of an Airy Crown Crust',
+    author: 'Chef Marco Valenti',
+    authorRole: 'Head Pizzaiolo',
+    authorAvatar: 'assets/images/avatar_2.jpg',
+    image: 'assets/images/wood_oven.jpg',
+    likes: 142,
+    content: `
+      <div class="modal-article-hero">
+        <img src="assets/images/wood_oven.jpg" alt="Stone Oven Pizza">
+        <div class="modal-hero-overlay"></div>
+      </div>
+      <h2 class="modal-article-title">48-Hour Cold Fermentation: Anatomy of an Airy Crown Crust</h2>
+      <div class="modal-author-strip">
+        <img src="assets/images/avatar_2.jpg" alt="Chef Marco Valenti" class="author-avatar">
+        <div>
+          <strong style="color: var(--color-white); font-size: 0.95rem; display: block;">Chef Marco Valenti</strong>
+          <span style="color: var(--color-text-muted); font-size: 0.8rem;">Head Pizzaiolo • Published Nov 2, 2026</span>
+        </div>
+      </div>
+      <div class="modal-article-prose">
+        <p>Standard commercial pizzerias force dough to rise in under 90 minutes using warm water and excessive commercial yeast. While this inflates dough quickly, complex grain starches remain unfermented. When eaten, that fermentation continues in your gut, resulting in bloating and fatigue.</p>
+        
+        <h4>1. The Secret of 4°C Enzymatic Breakdown</h4>
+        <p>By retarding dough at 4°C for 48 hours, yeast activity slows while enzymatic reactions peak. Protease gently breaks long gluten chains into supple strands, while amylase converts complex flour starches into maltose sugars. This yields unprecedented digestibility and deep complex sweetness.</p>
+
+        <div class="modal-quote-box">
+          "Time is the quietest chef in the kitchen. 48 hours of cold dormancy does what no artificial enhancer could ever replicate."
+        </div>
+
+        <h4>2. Volcanic Oven-Spring at 900°F</h4>
+        <p>When the cold-fermented dough enters our cordierite stone oven at 900°F, trapped carbon dioxide expands with volcanic force within 15 seconds, creating dramatic micro-blisters ("cornicione") that crackle delicately on the outside while staying cloud-soft inside.</p>
+
+        <div class="modal-takeaways-box">
+          <div class="modal-takeaways-title">🍕 Pizzaiolo Takeaways</div>
+          <ul class="modal-takeaways-list">
+            <li>Double-zero Italian Caputo flour blended with stone-milled ancient grains.</li>
+            <li>Strict 48-hour cold retard process ensuring effortless digestion.</li>
+            <li>Flash-baked in 90 seconds on 900°F radiant stone hearths.</li>
+          </ul>
+        </div>
+      </div>
+    `
+  },
+  'article-3': {
+    id: 'article-3',
+    category: 'recipes',
+    categoryBadge: '🌶️ Secret Recipes',
+    readTime: '⏱️ 5 min read',
+    date: 'Oct 28, 2026',
+    title: 'The 14-Spice Symphony: Balancing Smokiness, Warmth & Aromatics',
+    author: 'Spices Master Tariq',
+    authorRole: 'Flavor Alchemist',
+    authorAvatar: 'assets/images/avatar_3.jpg',
+    image: 'assets/images/chef_plating.jpg',
+    likes: 215,
+    content: `
+      <div class="modal-article-hero">
+        <img src="assets/images/chef_plating.jpg" alt="Chef Plating Spices">
+        <div class="modal-hero-overlay"></div>
+      </div>
+      <h2 class="modal-article-title">The 14-Spice Symphony: Balancing Smokiness, Warmth & Aromatics</h2>
+      <div class="modal-author-strip">
+        <img src="assets/images/avatar_3.jpg" alt="Spices Master Tariq" class="author-avatar">
+        <div>
+          <strong style="color: var(--color-white); font-size: 0.95rem; display: block;">Spices Master Tariq</strong>
+          <span style="color: var(--color-text-muted); font-size: 0.8rem;">Flavor Alchemist • Published Oct 28, 2026</span>
+        </div>
+      </div>
+      <div class="modal-article-prose">
+        <p>True spice craft is not about setting tongues on fire — it's about culinary orchestration. A great spice blend tells a three-act story on the palate: initial floral sweetness, mid-palate warmth, and a gentle smoky resonance.</p>
+        
+        <h4>1. The Three Tiers of Flavor Architecture</h4>
+        <p>Our house blend layers top notes of green cardamom and crushed star anise with heart notes of stone-ground coriander, roasted cumin, and mace. The bass note is delivered by hand-selected Kashmiri chili — celebrated worldwide for vibrant crimson color and silky, fruity warmth rather than harsh sting.</p>
+
+        <div class="modal-quote-box">
+          "If all you feel is raw heat, the kitchen has failed. Every skewer should deliver a narrative of fragrance, warmth, and live fire."
+        </div>
+
+        <h4>2. Daily Dry-Toast & Coarse Stone Milling</h4>
+        <p>Pre-ground spices lose over 60% of volatile aromatic oils within weeks of sitting in packaging. Every morning at 8:00 AM, our crew dry-toasts whole spices in cast-iron karahis until fragrant, then coarsely mills them just in time for the afternoon's marinades.</p>
+
+        <div class="modal-takeaways-box">
+          <div class="modal-takeaways-title">🌶️ Spice Master Takeaways</div>
+          <ul class="modal-takeaways-list">
+            <li>Whole spices toasted fresh daily to unlock volatile essential oils.</li>
+            <li>Zero artificial colorings, chemical MSG, or synthetic preservatives.</li>
+            <li>Coarsely milled texture designed specifically for flame adhesion.</li>
+          </ul>
+        </div>
+      </div>
+    `
+  },
+  'article-4': {
+    id: 'article-4',
+    category: 'culture',
+    categoryBadge: '🌙 Food Culture',
+    readTime: '⏱️ 3 min read',
+    date: 'Oct 21, 2026',
+    title: 'Midnight Cravers: Why Street Food Hits Harder After Dark',
+    author: 'Agha Culinary Team',
+    authorRole: 'Night Shift Crew',
+    authorAvatar: 'assets/images/avatar_1.jpg',
+    image: 'assets/images/restaurant_vibe.jpg',
+    likes: 198,
+    content: `
+      <div class="modal-article-hero">
+        <img src="assets/images/restaurant_vibe.jpg" alt="Restaurant Vibe at Night">
+        <div class="modal-hero-overlay"></div>
+      </div>
+      <h2 class="modal-article-title">Midnight Cravers: Why Street Food Hits Harder After Dark</h2>
+      <div class="modal-author-strip">
+        <img src="assets/images/avatar_1.jpg" alt="Agha Team" class="author-avatar">
+        <div>
+          <strong style="color: var(--color-white); font-size: 0.95rem; display: block;">Agha Culinary Team</strong>
+          <span style="color: var(--color-text-muted); font-size: 0.8rem;">Night Shift Crew • Published Oct 21, 2026</span>
+        </div>
+      </div>
+      <div class="modal-article-prose">
+        <p>Have you ever wondered why a smashed double cheeseburger, hot loaded fries, or sizzling charcoal seekh kebab tastes exponentially more intense at 1:00 AM than at 1:00 PM? Science points to sensory focus.</p>
+        
+        <h4>1. Sensory Attunement in the Dark</h4>
+        <p>When daylight noise subsides, ambient city lighting softens, and cognitive work slows, human senses shift. Olfactory receptors become hyper-sensitive to the warm volatile compounds of searing meats, melted aged cheeses, and toasted dough.</p>
+
+        <div class="modal-quote-box">
+          "Midnight isn't just an hour on the clock — it's a brotherhood of appetite and late-night cravings."
+        </div>
+
+        <h4>2. The Glow of Community</h4>
+        <p>Whether it's squads wrapping up intense gaming tournaments, hospital staff finishing demanding shifts, or friends laughing over platters on our outdoor heated terrace, the live flame has always been humanity's original gathering point.</p>
+
+        <div class="modal-takeaways-box">
+          <div class="modal-takeaways-title">🌙 Midnight Crew Takeaways</div>
+          <ul class="modal-takeaways-list">
+            <li>Fresh made-to-order grill & pizza service until 2:00 AM daily.</li>
+            <li>Guaranteed 25-minute late-night express delivery within city limits.</li>
+            <li>Heated terrace and vibrant neon squad booths always open late.</li>
+          </ul>
+        </div>
+      </div>
+    `
+  },
+  'article-5': {
+    id: 'article-5',
+    category: 'grilling',
+    categoryBadge: '🍢 Pitmaster Guide',
+    readTime: '⏱️ 4 min read',
+    date: 'Oct 15, 2026',
+    title: 'The Platter Architecture: How to Construct the Perfect Feast',
+    author: 'Grill Crew',
+    authorRole: 'Squad Feasts Specialist',
+    authorAvatar: 'assets/images/avatar_2.jpg',
+    image: 'assets/images/platter_grill.jpg',
+    likes: 167,
+    content: `
+      <div class="modal-article-hero">
+        <img src="assets/images/platter_grill.jpg" alt="Grill Platter Feast">
+        <div class="modal-hero-overlay"></div>
+      </div>
+      <h2 class="modal-article-title">The Platter Architecture: How to Construct the Perfect Feast</h2>
+      <div class="modal-author-strip">
+        <img src="assets/images/avatar_2.jpg" alt="Grill Crew" class="author-avatar">
+        <div>
+          <strong style="color: var(--color-white); font-size: 0.95rem; display: block;">Grill Crew</strong>
+          <span style="color: var(--color-text-muted); font-size: 0.8rem;">Squad Feasts Specialist • Published Oct 15, 2026</span>
+        </div>
+      </div>
+      <div class="modal-article-prose">
+        <p>A memorable feast is an architectural balance. Piling random grilled meats onto a plate creates sensory fatigue; orchestrating temperatures, textures, and contrasting acidity creates a feast that disappears within minutes.</p>
+        
+        <h4>1. The Triad: Smoke, Acid & Crunch</h4>
+        <p>Every bite on our platters is designed around a three-element principle: the deep smoky richness of live charcoal skewers must be countered by the crisp acid of sumac-rubbed red onions and cooling garlic toum, cradled within warm tandoor flatbread.</p>
+
+        <div class="modal-quote-box">
+          "A great platter is a conversation between hot fire, zesty pickles, and velvety dips."
+        </div>
+
+        <h4>2. Thermal Staging</h4>
+        <p>Our squad platters are constructed in synchronized stages: flatbreads are pulled straight from the clay oven as the last coals kiss the skewers, ensuring that crispy items stay dry and hot proteins arrive sizzling to your table.</p>
+
+        <div class="modal-takeaways-box">
+          <div class="modal-takeaways-title">🍢 Platter Architecture Takeaways</div>
+          <ul class="modal-takeaways-list">
+            <li>Balanced variety: tender beef seekh, spiced chicken boti, and charred lamb chops.</li>
+            <li>Three artisanal house-made dipping sauces included with every platter.</li>
+            <li>Calibrated portions tailored for squads of 2, 4, or 8 hungry cravers.</li>
+          </ul>
+        </div>
+      </div>
+    `
+  }
+};
+
+function initArticles() {
+  const filterPills = document.querySelectorAll('.article-filter-pill');
+  const articleCards = document.querySelectorAll('.article-featured-card, .article-card');
+  const modal = document.getElementById('articleModal');
+  const overlay = document.getElementById('articleModalOverlay');
+  const closeBtn = document.getElementById('articleModalCloseBtn');
+  const modalCategory = document.getElementById('articleModalCategory');
+  const modalReadTime = document.getElementById('articleModalReadTime');
+  const modalBody = document.getElementById('articleModalBody');
+
+  // Category Filter Navigation
+  filterPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      playSound('click');
+      filterPills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+
+      const filter = pill.getAttribute('data-article-filter');
+
+      articleCards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        if (filter === 'all' || category === filter) {
+          card.style.display = card.classList.contains('article-featured-card') ? 'grid' : 'flex';
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(12px)';
+          setTimeout(() => {
+            card.style.transition = 'all 0.35s ease';
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }, 30);
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Modal Open Handler
+  function openArticleModal(articleId) {
+    const data = articlesData[articleId];
+    if (!data || !modal || !overlay || !modalBody) return;
+
+    if (modalCategory) modalCategory.textContent = data.categoryBadge;
+    if (modalReadTime) modalReadTime.textContent = data.readTime;
+
+    let isLiked = false;
+    let currentLikes = data.likes;
+
+    modalBody.innerHTML = `
+      ${data.content}
+      <div class="modal-article-actions">
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <button class="modal-like-btn" id="modalLikeBtn">
+            <span>❤️</span> <span id="likeCount">${currentLikes}</span> Likes
+          </button>
+          <button class="modal-share-btn" id="modalShareBtn">
+            <span>🔗</span> Share Story
+          </button>
+        </div>
+        <button class="btn btn-primary btn-sm" id="modalOrderBtn">
+          🔥 Order Signature Dish
+        </button>
+      </div>
+    `;
+
+    // Interactivity: Like Button
+    const likeBtn = document.getElementById('modalLikeBtn');
+    const likeCountSpan = document.getElementById('likeCount');
+    if (likeBtn && likeCountSpan) {
+      likeBtn.addEventListener('click', () => {
+        isLiked = !isLiked;
+        if (isLiked) {
+          currentLikes++;
+          likeBtn.classList.add('liked');
+          playSound('success');
+          showToast('❤️ Thanks for loving this culinary story!');
+        } else {
+          currentLikes--;
+          likeBtn.classList.remove('liked');
+          playSound('click');
+        }
+        likeCountSpan.textContent = currentLikes;
+      });
+    }
+
+    // Interactivity: Share Button
+    const shareBtn = document.getElementById('modalShareBtn');
+    if (shareBtn) {
+      shareBtn.addEventListener('click', () => {
+        playSound('click');
+        const shareUrl = window.location.href.split('#')[0] + '#articles';
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(shareUrl).then(() => {
+            showToast('🔗 Article link copied to clipboard!');
+          }).catch(() => {
+            showToast('🔗 Share URL: ' + shareUrl);
+          });
+        } else {
+          showToast('🔗 Share URL: ' + shareUrl);
+        }
+      });
+    }
+
+    // Interactivity: Order CTA
+    const orderBtn = document.getElementById('modalOrderBtn');
+    if (orderBtn) {
+      orderBtn.addEventListener('click', () => {
+        closeArticleModal();
+        playSound('add');
+        const menuSection = document.getElementById('menu');
+        if (menuSection) {
+          menuSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    }
+
+    // Display Modal
+    overlay.classList.add('active');
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    modalBody.scrollTop = 0;
+    playSound('add');
+  }
+
+  // Modal Close Handler
+  function closeArticleModal() {
+    if (!modal || !overlay) return;
+    overlay.classList.remove('active');
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+    playSound('click');
+  }
+
+  // Bind Buttons
+  document.querySelectorAll('.read-article-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const articleId = btn.getAttribute('data-article-id');
+      if (articleId) openArticleModal(articleId);
+    });
+  });
+
+  if (closeBtn) closeBtn.addEventListener('click', closeArticleModal);
+  if (overlay) overlay.addEventListener('click', closeArticleModal);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal?.classList.contains('active')) {
+      closeArticleModal();
+    }
+  });
 }

@@ -58,6 +58,7 @@
         <a href="#cravers-lab" class="nav-link">Craver's Lab</a>
         <a href="#story" class="nav-link">Our Story</a>
         <a href="#reviews" class="nav-link">Reviews</a>
+        <a href="#articles" class="nav-link">Articles</a>
         <a href="#reserve" class="nav-link">Reserve</a>
       </nav>
 
@@ -709,7 +710,178 @@
     </section>
 
     <!-- ======================================================================
-         9. Table Reservation & VIP Lounge Booking
+         9. Culinary Journal & Articles Section
+         ====================================================================== -->
+    <section class="articles-section" id="articles">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header-center">
+          <span class="section-tag">STORIES, TIPS & INSIGHTS</span>
+          <h2 class="section-title">The Flame <span class="gradient-orange">Chronicles</span> & Articles</h2>
+          <p class="section-desc">
+            Deep dives into live-coal kebab mastery, 48-hour cold fermented crusts, secret spices, and the passionate stories behind Agha Food's kitchen.
+          </p>
+        </div>
+
+        <!-- Filter Navigation Pills -->
+        <div class="articles-filter-nav">
+          <button class="article-filter-pill active" data-article-filter="all">🌟 All Articles</button>
+          <button class="article-filter-pill" data-article-filter="grilling">🍢 Charcoal & Grilling</button>
+          <button class="article-filter-pill" data-article-filter="pizza">🍕 Pizza Science</button>
+          <button class="article-filter-pill" data-article-filter="recipes">🌶️ Secret Recipes</button>
+          <button class="article-filter-pill" data-article-filter="culture">🌙 Midnight Culture</button>
+        </div>
+
+        <!-- Featured Article Spotlight Card -->
+        <article class="article-featured-card" data-category="grilling" data-id="article-1">
+          <div class="featured-card-image-box">
+            <img src="assets/images/kebab_charcoal.jpg" alt="Live Charcoal Grilling Seekh Kebabs" class="featured-card-img" loading="lazy">
+            <span class="badge-float hot">🔥 Featured Masterclass</span>
+            <span class="badge-reading-time">⏱️ 6 min read</span>
+          </div>
+          <div class="featured-card-body">
+            <div class="article-meta-row">
+              <span class="article-category-badge">🍢 Grilling Mastery</span>
+              <span class="article-date">Nov 5, 2026</span>
+            </div>
+            <h3 class="featured-card-title">The Science of 800°F Charcoal: Why Real Lump Wood Outperforms Gas Grills</h3>
+            <p class="featured-card-desc">
+              Discover the thermo-chemistry of the Maillard reaction over glowing oakwood coals. Learn how vaporized fat drippings create microscopic flavor clouds that penetrate deep into skewers, delivering unbeatable smoky succulence.
+            </p>
+            <div class="featured-card-footer">
+              <div class="author-block">
+                <img src="assets/images/avatar_1.jpg" alt="Chef Tariq Agha" class="author-avatar">
+                <div class="author-info">
+                  <span class="author-name">Chef Tariq Agha</span>
+                  <span class="author-title">Master Pitmaster & Founder</span>
+                </div>
+              </div>
+              <button class="btn btn-primary btn-sm read-article-btn" data-article-id="article-1">
+                Read Full Story →
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Articles Grid -->
+        <div class="articles-grid">
+          <!-- Article Card 2: Pizza Fermentation -->
+          <article class="article-card" data-category="pizza" data-id="article-2">
+            <div class="article-card-image-box">
+              <img src="assets/images/wood_oven.jpg" alt="Wood Oven Stone-Fired Pizza" class="article-card-img" loading="lazy">
+              <span class="badge-float">🍕 Crust Science</span>
+              <span class="badge-reading-time">⏱️ 4 min</span>
+            </div>
+            <div class="article-card-body">
+              <div class="article-meta-row">
+                <span class="article-category-badge">Stone Oven</span>
+                <span class="article-date">Nov 2, 2026</span>
+              </div>
+              <h3 class="article-card-title">48-Hour Cold Fermentation: Anatomy of an Airy Crown Crust</h3>
+              <p class="article-card-desc">
+                Why rapid dough is the enemy of taste and digestion. We dissect the cold enzymatic process behind blistered crusts and cloud-like crumb.
+              </p>
+              <div class="article-card-footer">
+                <div class="author-block-small">
+                  <img src="assets/images/avatar_2.jpg" alt="Chef Marco Valenti" class="author-avatar-sm">
+                  <span>Marco V.</span>
+                </div>
+                <button class="article-text-btn read-article-btn" data-article-id="article-2">
+                  Read Article →
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article Card 3: 14 Spices -->
+          <article class="article-card" data-category="recipes" data-id="article-3">
+            <div class="article-card-image-box">
+              <img src="assets/images/chef_plating.jpg" alt="Chef Plating with Spices" class="article-card-img" loading="lazy">
+              <span class="badge-float">🌶️ Secret Blend</span>
+              <span class="badge-reading-time">⏱️ 5 min</span>
+            </div>
+            <div class="article-card-body">
+              <div class="article-meta-row">
+                <span class="article-category-badge">Secret Recipes</span>
+                <span class="article-date">Oct 28, 2026</span>
+              </div>
+              <h3 class="article-card-title">The 14-Spice Symphony: Balancing Smokiness, Warmth & Aromatics</h3>
+              <p class="article-card-desc">
+                Take an exclusive tour through our spice sanctuary. Learn why toasted green cardamom and Kashmiri chilies are freshly ground every 48 hours.
+              </p>
+              <div class="article-card-footer">
+                <div class="author-block-small">
+                  <img src="assets/images/avatar_3.jpg" alt="Spices Master Tariq" class="author-avatar-sm">
+                  <span>Master Tariq</span>
+                </div>
+                <button class="article-text-btn read-article-btn" data-article-id="article-3">
+                  Read Article →
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article Card 4: Midnight Cravers -->
+          <article class="article-card" data-category="culture" data-id="article-4">
+            <div class="article-card-image-box">
+              <img src="assets/images/restaurant_vibe.jpg" alt="Restaurant Vibe at Night" class="article-card-img" loading="lazy">
+              <span class="badge-float">🌙 Culture</span>
+              <span class="badge-reading-time">⏱️ 3 min</span>
+            </div>
+            <div class="article-card-body">
+              <div class="article-meta-row">
+                <span class="article-category-badge">Food Culture</span>
+                <span class="article-date">Oct 21, 2026</span>
+              </div>
+              <h3 class="article-card-title">Midnight Cravers: Why Street Food Hits Harder After Dark</h3>
+              <p class="article-card-desc">
+                Exploring the nocturnal rituals of late-night foodies, squad gaming feasts, and why hot coals bring people together after midnight.
+              </p>
+              <div class="article-card-footer">
+                <div class="author-block-small">
+                  <img src="assets/images/avatar_1.jpg" alt="Agha Team" class="author-avatar-sm">
+                  <span>Night Crew</span>
+                </div>
+                <button class="article-text-btn read-article-btn" data-article-id="article-4">
+                  Read Article →
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article Card 5: Platter Architecture -->
+          <article class="article-card" data-category="grilling" data-id="article-5">
+            <div class="article-card-image-box">
+              <img src="assets/images/platter_grill.jpg" alt="Grill Platter Feast" class="article-card-img" loading="lazy">
+              <span class="badge-float">🍢 Feast Guide</span>
+              <span class="badge-reading-time">⏱️ 4 min</span>
+            </div>
+            <div class="article-card-body">
+              <div class="article-meta-row">
+                <span class="article-category-badge">Pitmaster Guide</span>
+                <span class="article-date">Oct 15, 2026</span>
+              </div>
+              <h3 class="article-card-title">The Platter Architecture: How to Construct the Perfect Feast</h3>
+              <p class="article-card-desc">
+                A masterclass in textural balance: uniting searing charcoal meats, garlic toum, zesty sumac onions, and fresh clay-oven bread.
+              </p>
+              <div class="article-card-footer">
+                <div class="author-block-small">
+                  <img src="assets/images/avatar_2.jpg" alt="Grill Crew" class="author-avatar-sm">
+                  <span>Grill Crew</span>
+                </div>
+                <button class="article-text-btn read-article-btn" data-article-id="article-5">
+                  Read Article →
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         10. Table Reservation & VIP Lounge Booking
          ====================================================================== -->
     <section class="reservation-section" id="reserve">
       <div class="container">
@@ -863,6 +1035,24 @@
   </aside>
 
   <!-- ========================================================================
+       Slide-out Article Reader Modal
+       ======================================================================== -->
+  <div class="article-modal-overlay" id="articleModalOverlay"></div>
+  <aside class="article-modal" id="articleModal" role="dialog" aria-modal="true" aria-labelledby="articleModalTitle">
+    <div class="article-modal-header">
+      <div class="article-modal-tags">
+        <span class="article-modal-badge" id="articleModalCategory">Grilling Mastery</span>
+        <span class="article-modal-readtime" id="articleModalReadTime">⏱️ 6 min read</span>
+      </div>
+      <button class="article-modal-close-btn" id="articleModalCloseBtn" aria-label="Close Article">✕</button>
+    </div>
+    
+    <div class="article-modal-body" id="articleModalBody">
+      <!-- Populated dynamically via main.js -->
+    </div>
+  </aside>
+
+  <!-- ========================================================================
        11. Footer Section (Matching Reference Image 4 Layout)
        ======================================================================== -->
   <footer class="site-footer">
@@ -897,6 +1087,7 @@
             <li><a href="#cravers-lab">Craver's Lab</a></li>
             <li><a href="#story">Our Story</a></li>
             <li><a href="#reviews">Guest Reviews</a></li>
+            <li><a href="#articles">Articles & Journal</a></li>
             <li><a href="#reserve">Table Reservation</a></li>
           </ul>
         </div>
