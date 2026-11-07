@@ -722,6 +722,21 @@ function showToast(message) {
    12. Articles & Culinary Journal Engine
    ========================================================================== */
 const articlesData = {
+  'article-9': {
+    id: 'article-9',
+    category: 'grilling',
+    categoryBadge: '🍔 Smash Mastery',
+    tabTitle: '🍔 Tallow Smash',
+    readTime: '⏱️ 5 min read',
+    date: 'Nov 07, 2026',
+    title: "Wagyu Tallow Smash: The Physics Behind Our Crispy Lace Patty Edges",
+    author: "Agha Culinary Team",
+    authorRole: "Night Shift Innovation Crew",
+    authorAvatar: 'assets/images/avatar_1.jpg',
+    image: 'assets/images/burger_monster.jpg',
+    likes: 176,
+    storyHtml: `<p>The secret to a monster smash burger isn't thickness — it's surface contact. By searing a 4 oz beef ball onto a scorching 450°F seasoned cast-iron plancha and applying 15 pounds of direct downward pressure with a weighted steel press, we maximize contact down to the millimeter.</p><h4>1. The Lacey Edge Phenomenon</h4><p>The edges spread paper-thin, frying in rendering Wagyu tallow until they turn into crisp, crunchy lace. Trapped steam cooks the center in under two minutes, leaving the double-stack burger dripping with juice when assembled with melted American cheese and house secret burger relish.</p><div class="reader-quote-box">"A great smash patty is all about contrast: lacy, crispy edges on the outside, succulent melt-in-your-mouth beef inside."</div><p>Served inside a butter-toasted potato brioche bun that absorbs the meat drippings without getting soggy.</p><div class="reader-takeaways-box"><div class="reader-takeaways-title">🔥 Pitmaster Takeaways</div><ul class="reader-takeaways-list"><li>80/20 fresh chuck and brisket blend, never frozen.</li><li>High-pressure smash with 450°F surface heat creates instant Maillard crust.</li><li>Crispy lace edges paired with double sharp melted cheese.</li></ul></div>`
+  },
   'article-8': {
     id: 'article-8',
     category: 'grilling',
