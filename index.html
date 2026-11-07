@@ -13,7 +13,7 @@
   <link rel="icon" type="image/png" href="assets/images/logo.png">
   
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=3.0">
 </head>
 <body>
 
@@ -710,7 +710,7 @@
     </section>
 
     <!-- ======================================================================
-         9. Culinary Journal & Articles Section
+         9. Culinary Journal & Articles Section (Direct In-Page Reader)
          ====================================================================== -->
     <section class="articles-section" id="articles">
       <div class="container">
@@ -719,49 +719,107 @@
           <span class="section-tag">STORIES, TIPS & INSIGHTS</span>
           <h2 class="section-title">The Flame <span class="gradient-orange">Chronicles</span> & Articles</h2>
           <p class="section-desc">
-            Deep dives into live-coal kebab mastery, 48-hour cold fermented crusts, secret spices, and the passionate stories behind Agha Food's kitchen.
+            Deep dives into live-coal kebab mastery, 48-hour cold fermented crusts, secret spices, and late-night culinary culture. Click any story below to read directly.
           </p>
         </div>
 
-        <!-- Filter Navigation Pills -->
-        <div class="articles-filter-nav">
-          <button class="article-filter-pill active" data-article-filter="all">🌟 All Articles</button>
-          <button class="article-filter-pill" data-article-filter="grilling">🍢 Charcoal & Grilling</button>
-          <button class="article-filter-pill" data-article-filter="pizza">🍕 Pizza Science</button>
-          <button class="article-filter-pill" data-article-filter="recipes">🌶️ Secret Recipes</button>
-          <button class="article-filter-pill" data-article-filter="culture">🌙 Midnight Culture</button>
+        <!-- Article Selector Tabs Bar -->
+        <div class="article-tabs-bar" id="articleTabsBar">
+          <button class="article-tab-btn active" data-article-id="article-1">
+            🍢 Charcoal Science
+          </button>
+          <button class="article-tab-btn" data-article-id="article-2">
+            🍕 48h Ferment Crust
+          </button>
+          <button class="article-tab-btn" data-article-id="article-3">
+            🌶️ 14-Spice Secret
+          </button>
+          <button class="article-tab-btn" data-article-id="article-4">
+            🌙 Midnight Cravers
+          </button>
+          <button class="article-tab-btn" data-article-id="article-5">
+            🍖 Platter Architecture
+          </button>
         </div>
 
-        <!-- Featured Article Spotlight Card -->
-        <article class="article-featured-card" data-category="grilling" data-id="article-1">
-          <div class="featured-card-image-box">
-            <img src="assets/images/kebab_charcoal.jpg" alt="Live Charcoal Grilling Seekh Kebabs" class="featured-card-img" loading="lazy">
-            <span class="badge-float hot">🔥 Featured Masterclass</span>
-            <span class="badge-reading-time">⏱️ 6 min read</span>
-          </div>
-          <div class="featured-card-body">
-            <div class="article-meta-row">
-              <span class="article-category-badge">🍢 Grilling Mastery</span>
-              <span class="article-date">Nov 5, 2026</span>
-            </div>
-            <h3 class="featured-card-title">The Science of 800°F Charcoal: Why Real Lump Wood Outperforms Gas Grills</h3>
-            <p class="featured-card-desc">
-              Discover the thermo-chemistry of the Maillard reaction over glowing oakwood coals. Learn how vaporized fat drippings create microscopic flavor clouds that penetrate deep into skewers, delivering unbeatable smoky succulence.
-            </p>
-            <div class="featured-card-footer">
-              <div class="author-block">
-                <img src="assets/images/avatar_1.jpg" alt="Chef Tariq Agha" class="author-avatar">
-                <div class="author-info">
-                  <span class="author-name">Chef Tariq Agha</span>
-                  <span class="author-title">Master Pitmaster & Founder</span>
+        <!-- Direct In-Page Active Article Reader -->
+        <div class="direct-article-reader" id="directArticleReader">
+          <div class="reader-grid">
+            <!-- Left Media Column -->
+            <div class="reader-media-col">
+              <div class="reader-image-wrap">
+                <img src="assets/images/kebab_charcoal.jpg" alt="Charcoal Grilling Seekh Kebabs" class="reader-img" id="readerImage">
+                <span class="reader-article-badge" id="readerBadge">🍢 Grilling Mastery</span>
+                <span class="reader-readtime-badge" id="readerReadTime">⏱️ 6 min read</span>
+              </div>
+
+              <div class="reader-author-box">
+                <img src="assets/images/avatar_1.jpg" alt="Chef Tariq Agha" class="reader-author-avatar" id="readerAvatar">
+                <div>
+                  <strong style="color: #FFFFFF; font-size: 0.92rem; display: block;" id="readerAuthor">Chef Tariq Agha</strong>
+                  <span style="color: #9CA3AF; font-size: 0.78rem;" id="readerRole">Master Pitmaster & Founder</span>
                 </div>
               </div>
-              <button class="btn btn-primary btn-sm read-article-btn" data-article-id="article-1">
-                Read Full Story →
+
+              <div class="reader-actions-bar">
+                <button class="modal-like-btn" id="readerLikeBtn" style="flex: 1; justify-content: center;">
+                  <span>❤️</span> <span id="readerLikeCount">184</span> Likes
+                </button>
+                <button class="modal-share-btn" id="readerShareBtn" style="flex: 1; justify-content: center;">
+                  <span>🔗</span> Share Story
+                </button>
+              </div>
+
+              <button class="btn btn-primary" id="readerOrderBtn" style="width: 100%; justify-content: center; margin-top: 4px;">
+                🔥 Order Signature Dish
               </button>
             </div>
+
+            <!-- Right Content Column (Directly Readable) -->
+            <div class="reader-content-col">
+              <div class="reader-header-meta">
+                <span style="color: var(--color-primary); font-weight: 700; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.06em;" id="readerMetaBadge">🍢 GRILLING MASTERY</span>
+                <span>•</span>
+                <span id="readerDate">Nov 5, 2026</span>
+                <span>•</span>
+                <span id="readerMetaReadTime">⏱️ 6 min read</span>
+              </div>
+
+              <h2 class="reader-title" id="readerTitle">The Science of 800°F Charcoal: Why Real Lump Wood Outperforms Gas Grills</h2>
+
+              <div class="reader-body" id="readerBodyText">
+                <p>Gas grillers often preach the convenience of turning a knob, but lump oakwood charcoal creates thermodynamic poetry that no gas flame or electric element can match. When skewered meat meets an 800°F charcoal zone, surface moisture flash-vaporizes within three seconds.</p>
+                
+                <h4>1. The Chemistry of Instant Flash Searing</h4>
+                <p>This instantaneous flash triggers the renowned Maillard cascade — reducing sugars and amino acids combine rapidly to generate hundreds of new aromatic compounds. Unlike gas combustion, which produces water vapor that steams meat, natural lump charcoal delivers dry, radiant infrared heat that crisps exterior collagen while preserving 100% of internal juices.</p>
+
+                <div class="reader-quote-box">
+                  "Charcoal isn't just a heat source; it is an active ingredient. The natural lignin inside seasoned oak produces guaiacol and syringol — the molecular hallmarks of authentic woodsmoke."
+                </div>
+
+                <h4>2. The Fat-Vaporization Feedback Loop</h4>
+                <p>As our hand-skewered seekh kebabs drip spiced fat down into white-hot coals, the droplets don't merely burn away. They atomize into microscopic smoke plumes that surge upward, basting the meat in a gossamer veil of wood-fired umami. It's a continuous self-basting cycle unique to live lump coals.</p>
+
+                <div class="reader-takeaways-box">
+                  <div class="reader-takeaways-title">🔥 Pitmaster Takeaways</div>
+                  <ul class="reader-takeaways-list">
+                    <li>100% organic lump oakwood charcoal with zero chemical binders or petroleum accelerants.</li>
+                    <li>Continuous 45-second skewer rotations to maintain internal thermal basting equilibrium.</li>
+                    <li>House-tempered 14-spice marinade rested for a minimum of 8 hours before touching coals.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
-        </article>
+        </div>
+
+        <!-- Quick Story Switcher Heading -->
+        <div style="margin-top: 50px; margin-bottom: 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+          <h3 style="font-family: var(--font-serif); font-size: 1.5rem; color: #FFFFFF;">
+            Explore All <span class="gradient-orange">Culinary Stories</span>
+          </h3>
+          <span style="color: var(--color-text-muted); font-size: 0.85rem;">Click any story card below to read it directly above</span>
+        </div>
 
         <!-- Articles Grid -->
         <div class="articles-grid">
@@ -769,7 +827,7 @@
           <article class="article-card" data-category="pizza" data-id="article-2">
             <div class="article-card-image-box">
               <img src="assets/images/wood_oven.jpg" alt="Wood Oven Stone-Fired Pizza" class="article-card-img" loading="lazy">
-              <span class="badge-float">🍕 Crust Science</span>
+              <span class="article-card-badge">🍕 Pizza Science</span>
               <span class="badge-reading-time">⏱️ 4 min</span>
             </div>
             <div class="article-card-body">
@@ -786,8 +844,8 @@
                   <img src="assets/images/avatar_2.jpg" alt="Chef Marco Valenti" class="author-avatar-sm">
                   <span>Marco V.</span>
                 </div>
-                <button class="article-text-btn read-article-btn" data-article-id="article-2">
-                  Read Article →
+                <button class="article-text-btn read-direct-btn" data-article-id="article-2">
+                  Read Story Directly →
                 </button>
               </div>
             </div>
@@ -797,7 +855,7 @@
           <article class="article-card" data-category="recipes" data-id="article-3">
             <div class="article-card-image-box">
               <img src="assets/images/chef_plating.jpg" alt="Chef Plating with Spices" class="article-card-img" loading="lazy">
-              <span class="badge-float">🌶️ Secret Blend</span>
+              <span class="article-card-badge">🌶️ Secret Recipes</span>
               <span class="badge-reading-time">⏱️ 5 min</span>
             </div>
             <div class="article-card-body">
@@ -814,8 +872,8 @@
                   <img src="assets/images/avatar_3.jpg" alt="Spices Master Tariq" class="author-avatar-sm">
                   <span>Master Tariq</span>
                 </div>
-                <button class="article-text-btn read-article-btn" data-article-id="article-3">
-                  Read Article →
+                <button class="article-text-btn read-direct-btn" data-article-id="article-3">
+                  Read Story Directly →
                 </button>
               </div>
             </div>
@@ -825,7 +883,7 @@
           <article class="article-card" data-category="culture" data-id="article-4">
             <div class="article-card-image-box">
               <img src="assets/images/restaurant_vibe.jpg" alt="Restaurant Vibe at Night" class="article-card-img" loading="lazy">
-              <span class="badge-float">🌙 Culture</span>
+              <span class="article-card-badge">🌙 Midnight Culture</span>
               <span class="badge-reading-time">⏱️ 3 min</span>
             </div>
             <div class="article-card-body">
@@ -842,8 +900,8 @@
                   <img src="assets/images/avatar_1.jpg" alt="Agha Team" class="author-avatar-sm">
                   <span>Night Crew</span>
                 </div>
-                <button class="article-text-btn read-article-btn" data-article-id="article-4">
-                  Read Article →
+                <button class="article-text-btn read-direct-btn" data-article-id="article-4">
+                  Read Story Directly →
                 </button>
               </div>
             </div>
@@ -853,7 +911,7 @@
           <article class="article-card" data-category="grilling" data-id="article-5">
             <div class="article-card-image-box">
               <img src="assets/images/platter_grill.jpg" alt="Grill Platter Feast" class="article-card-img" loading="lazy">
-              <span class="badge-float">🍢 Feast Guide</span>
+              <span class="article-card-badge">🍖 Platter Guide</span>
               <span class="badge-reading-time">⏱️ 4 min</span>
             </div>
             <div class="article-card-body">
@@ -870,8 +928,8 @@
                   <img src="assets/images/avatar_2.jpg" alt="Grill Crew" class="author-avatar-sm">
                   <span>Grill Crew</span>
                 </div>
-                <button class="article-text-btn read-article-btn" data-article-id="article-5">
-                  Read Article →
+                <button class="article-text-btn read-direct-btn" data-article-id="article-5">
+                  Read Story Directly →
                 </button>
               </div>
             </div>
