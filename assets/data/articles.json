@@ -1,5 +1,21 @@
 [
   {
+    "id": "article-10",
+    "category": "culture",
+    "categoryBadge": "🌙 Food Culture",
+    "tabTitle": "🌙 Late Night Vibe",
+    "readTime": "⏱️ 5 min read",
+    "date": "Nov 08, 2026",
+    "title": "Sizzle Culture at 1:00 AM: Why Late-Night Dining Is A Modern Community Ritual",
+    "excerpt": "Exploring why food tastes exponentially better in good company after midnight, and how street grill culture unites night owls across the city.",
+    "author": "Chef Marco Valenti",
+    "authorRole": "Head Pizzaiolo & Dough Specialist",
+    "authorAvatar": "assets/images/avatar_2.jpg",
+    "image": "assets/images/restaurant_vibe.jpg",
+    "likes": 184,
+    "storyHtml": "<p>When the sun goes down and city traffic clears, the rhythm of dining shifts completely. Daytime dining is often rushed between meetings; late-night dining is pure social connection. Squads gather around sizzling grill platters, laughter echoes across the heated terrace, and time slows down.</p><h4>1. The Magic of Shared Feasting</h4><p>Food shared from a giant central platter breaks down barriers. Breaking fresh flatbread, dipping into fiery garlic toum, and passing skewers across the table turns a simple midnight craving into a shared memory.</p><div class=\"reader-quote-box\">\"The best conversations happen after midnight over a smoking grill and fresh garlic naan.\"</div><p>Our kitchen stays fully staffed and live grills keep glowing until 2:00 AM every night to serve night owls, gamers, creators, and third-shift heroes.</p><div class=\"reader-takeaways-box\"><div class=\"reader-takeaways-title\">🔥 Pitmaster Takeaways</div><ul class=\"reader-takeaways-list\"><li>Fresh, made-from-scratch food served until 2:00 AM every single night.</li><li>Vibrant heated terrace and private squad booths.</li><li>Shared platter dining that brings friends together.</li></ul></div>"
+  },
+  {
     "id": "article-9",
     "category": "grilling",
     "categoryBadge": "🍔 Smash Mastery",
