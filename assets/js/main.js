@@ -722,6 +722,21 @@ function showToast(message) {
    12. Articles & Culinary Journal Engine
    ========================================================================== */
 const articlesData = {
+  'article-11': {
+    id: 'article-11',
+    category: 'culture',
+    categoryBadge: '🌙 Food Culture',
+    tabTitle: '🌙 Late Night Vibe',
+    readTime: '⏱️ 5 min read',
+    date: 'Nov 09, 2026',
+    title: "Sizzle Culture at 1:00 AM: Why Late-Night Dining Is A Modern Community Ritual (2026 Edition)",
+    author: "Agha Culinary Team",
+    authorRole: "Night Shift Innovation Crew",
+    authorAvatar: 'assets/images/avatar_1.jpg',
+    image: 'assets/images/restaurant_vibe.jpg',
+    likes: 147,
+    storyHtml: `<p>When the sun goes down and city traffic clears, the rhythm of dining shifts completely. Daytime dining is often rushed between meetings; late-night dining is pure social connection. Squads gather around sizzling grill platters, laughter echoes across the heated terrace, and time slows down.</p><h4>1. The Magic of Shared Feasting</h4><p>Food shared from a giant central platter breaks down barriers. Breaking fresh flatbread, dipping into fiery garlic toum, and passing skewers across the table turns a simple midnight craving into a shared memory.</p><div class="reader-quote-box">"The best conversations happen after midnight over a smoking grill and fresh garlic naan."</div><p>Our kitchen stays fully staffed and live grills keep glowing until 2:00 AM every night to serve night owls, gamers, creators, and third-shift heroes.</p><div class="reader-takeaways-box"><div class="reader-takeaways-title">🔥 Pitmaster Takeaways</div><ul class="reader-takeaways-list"><li>Fresh, made-from-scratch food served until 2:00 AM every single night.</li><li>Vibrant heated terrace and private squad booths.</li><li>Shared platter dining that brings friends together.</li></ul></div>`
+  },
   'article-10': {
     id: 'article-10',
     category: 'culture',
