@@ -722,6 +722,21 @@ function showToast(message) {
    12. Articles & Culinary Journal Engine
    ========================================================================== */
 const articlesData = {
+  'article-15': {
+    id: 'article-15',
+    category: 'grilling',
+    categoryBadge: '🍢 Pitmaster Lab',
+    tabTitle: '🧈 Marrow Seekh',
+    readTime: '⏱️ 5 min read',
+    date: 'Nov 13, 2026',
+    title: "Bone Marrow Butter Glaze: Why Basting Over Live Coals Changes Everything (2026 Edition)",
+    author: "Spices Master Tariq",
+    authorRole: "Flavor Alchemist",
+    authorAvatar: 'assets/images/avatar_3.jpg',
+    image: 'assets/images/kebab_charcoal.jpg',
+    likes: 214,
+    storyHtml: `<p>When lean beef or lamb hits intense radiant charcoal heat, surface moisture vaporizes rapidly. While this creates the beloved Maillard crunch, it risks drying the outermost millimeter of meat. Our solution: an emulsion of rendered beef bone marrow whipped with garlic, smoked paprika, and wild thyme.</p><h4>1. The Lipid Barrier and Caramelization</h4><p>Brushing skewers with hot marrow butter every 60 seconds creates a thermal barrier. The fats melt into microscopic crevices, frying the spices on the skewer's exterior while preventing juices from escaping. The dripping fats also feed the coals beneath, sending aromatic smoke right back into the meat.</p><div class="reader-quote-box">"Basting with bone marrow isn't an indulgence — it's thermodynamic insurance against dry kebab skewers."</div><p>The final glaze delivers a deep, velvet mouthfeel that balances the sharp acidity of pickled red sumac onions and fresh clay-oven bread.</p><div class="reader-takeaways-box"><div class="reader-takeaways-title">🔥 Pitmaster Takeaways</div><ul class="reader-takeaways-list"><li>100% grass-fed bone marrow rendered slow and whipped with aromatic herbs.</li><li>Applied at 45-second intervals during prime charcoal sear.</li><li>Creates a glossy, caramelized outer shell that seals in all natural juices.</li></ul></div>`
+  },
   'article-14': {
     id: 'article-14',
     category: 'grilling',
